@@ -7,14 +7,14 @@ export default function Marquee() {
 
   return (
     <section className="overflow-hidden bg-white py-8 lg:pt-24 lg:pb-40">
-      <div className="flex animate-[scroll_15s_linear_infinite] whitespace-nowrap items-center">
+      <div className="flex animate-[scroll_15s_linear_infinite] whitespace-nowrap items-center hover:[animation-play-state:paused]">
         {repeated.map((word, i) => (
           <React.Fragment key={i}>
             <span
-              className={`text-[36px] lg:text-[50px] xl:text-[60px] font-extrabold px-6 lg:px-12 ${
+              className={`text-[36px] lg:text-[50px] xl:text-[60px] font-extrabold px-6 lg:px-12 tracking-wider ${
                 i % 2 === 0
                   ? "text-[#99B81B]"
-                  : "text-transparent [-webkit-text-stroke:1px_#99B81B]"
+                  : "text-white [text-shadow:-1px_-1px_0_#99B81B,1px_-1px_0_#99B81B,-1px_1px_0_#99B81B,1px_1px_0_#99B81B]"
               }`}
             >
               {word}
