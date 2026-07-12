@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -25,6 +25,18 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const target = document.getElementById(targetId);
+    if (target) {
+      const headerHeight = window.innerWidth >= 1024 ? 83 : 60;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+    }
+    setOpen(false);
+  }, []);
+
   return (
     <header className={`fixed top-0 left-0 z-50 w-full h-[60px] lg:h-[83px] transition-all duration-300 ${scrolled ? "bg-white shadow-sm" : "bg-transparent"}`}>
       <div className="flex items-center justify-between px-4 py-3 lg:px-10 lg:py-4 h-full max-w-[1920px] mx-auto">
@@ -45,6 +57,7 @@ export default function Header() {
             <a
               key={link.label}
               href={link.href}
+              onClick={(e) => scrollToSection(e, link.href)}
               className={`text-sm 2xl:text-base font-medium transition-colors ${scrolled ? "text-black/90 hover:text-[#99B81B]" : "text-white/90 hover:text-[#99B81B]"}`}
             >
               {link.label}
@@ -92,7 +105,7 @@ export default function Header() {
             <a
               key={link.label}
               href={link.href}
-              onClick={() => setOpen(false)}
+              onClick={(e) => scrollToSection(e, link.href)}
               className="text-lg font-medium text-white"
             >
               {link.label}
