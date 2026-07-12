@@ -111,7 +111,7 @@ export default function Hero() {
               <span className="text-center text-[50px] font-bold uppercase leading-none tracking-normal text-white flex items-start">
                 19<span className="text-[24px] font-medium pt-1">°C</span>
               </span>
-              <div className="flex flex-col pb-1 text-right">
+              <div className="flex flex-col pb-1">
                 <span className="text-white font-bold text-lg">Weather</span>
                 <span className="text-white/90 text-sm font-light mt-0.5">
                   Saturday, 8 pm

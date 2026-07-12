@@ -20,9 +20,9 @@ export default function AboutSection() {
       <Image
         src="/images/about-bg.svg"
         alt="About Background"
-        width={380}
-        height={380}
-        className="absolute top-10 left-0 object-cover z-0 pointer-events-none opacity-50 lg:opacity-100"
+        width={350}
+        height={300}
+        className="absolute top-6 left-0 object-cover z-0 pointer-events-none opacity-50 lg:opacity-100"
       />
       <span className="pointer-events-none absolute -left-4 lg:-left-[10vw] top-0 -z-10 text-[180px] lg:text-[20vw] font-black leading-none text-lime-100/70">
         A
