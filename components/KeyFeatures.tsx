@@ -90,6 +90,7 @@ export default function KeyFeatures() {
                 src="/images/glimpse-img-1.jpg"
                 alt="Glimpse 1"
                 fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
             </div>
@@ -98,6 +99,7 @@ export default function KeyFeatures() {
                 src="/images/glimpse-img-2.jpg"
                 alt="Glimpse 2"
                 fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover"
               />
             </div>

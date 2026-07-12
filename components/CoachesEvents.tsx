@@ -8,6 +8,7 @@ export default function CoachesEvents() {
           src="/images/event-image-2.png"
           alt="Our coaches"
           fill
+          sizes="(max-width: 1024px) 100vw, 50vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -52,6 +53,7 @@ export default function CoachesEvents() {
             src="/images/event-image-1.png"
             alt="Events"
             fill
+            sizes="295px"
             className="object-contain object-right-bottom"
           />
         </div>

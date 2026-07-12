@@ -36,6 +36,7 @@ export default function Professionals() {
                 src={person.img}
                 alt={person.name}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 349px"
                 className="object-cover object-top"
               />
             </div>

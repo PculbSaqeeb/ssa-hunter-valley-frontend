@@ -7,7 +7,9 @@ export default function QuoteSection() {
         src="/images/quote-bg.jpg"
         alt="Quote background"
         fill
+        sizes="100vw"
         className="object-cover z-0"
+        priority
       />
       <div className="absolute inset-0 bg-black/10 z-0" />
 

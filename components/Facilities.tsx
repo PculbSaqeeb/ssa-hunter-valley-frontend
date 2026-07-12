@@ -69,6 +69,7 @@ export default function Facilities() {
                 <Image 
                   src={fac.img} 
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 386px"
                   className="object-cover" 
                   alt={fac.title} 
                 />

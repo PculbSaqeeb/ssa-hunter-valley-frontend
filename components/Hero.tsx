@@ -3,14 +3,17 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      <Image
-        src="/images/banner.gif"
-        alt="Tennis courts at sunset"
-        fill
-        priority
-        className="absolute inset-0 object-cover"
-        unoptimized
-      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover"
+        poster="/images/banner-poster.png"
+      >
+        <source src="/images/banner-video.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center pt-[80px] pb-[250px] md:pb-[200px] lg:pt-0 lg:pb-0 px-4 lg:px-8 text-center max-w-[1920px] mx-auto">

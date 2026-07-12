@@ -10,7 +10,7 @@ export default function MockupPage() {
 
       <div className="flex-1 w-full flex items-center justify-center">
         {/* Desktop Mockup (lg and up) - Ultra Realistic MacBook Style */}
-        <div className="hidden lg:flex flex-col items-center relative scale-[0.55] xl:scale-[0.65] 2xl:scale-75 mt-2 transform-gpu">
+        <div className="hidden 2xl:flex flex-col items-center relative scale-[0.55] xl:scale-[0.65] 2xl:scale-75 mt-2 transform-gpu">
           {/* Screen Assembly */}
           <div className="relative w-[1280px] h-[800px] bg-[#0a0a0a] rounded-[2rem] border-[1px] border-[#333] ring-1 ring-white/10 p-[20px] pb-[40px] shadow-2xl z-10">
             {/* Camera */}
@@ -32,27 +32,38 @@ export default function MockupPage() {
           </div>
         </div>
 
-        {/* Tablet Mockup (md to lg) - Realistic iPad Style */}
-        <div className="hidden md:flex lg:hidden flex-col items-center relative scale-[0.65] xl:scale-75 mt-4">
-          <div className="relative w-[768px] h-[1024px] max-h-[85vh] bg-[#0a0a0a] rounded-[2.5rem] border-[1px] border-[#333] ring-[2px] ring-[#555] p-[12px] shadow-[0_30px_60px_rgba(0,0,0,0.8)] z-10">
-            {/* Side Buttons */}
-            <div className="absolute top-[80px] -right-[3px] w-[3px] h-[40px] bg-gradient-to-b from-[#666] to-[#444] rounded-r-md shadow-lg"></div>
-            <div className="absolute top-[140px] -right-[3px] w-[3px] h-[80px] bg-gradient-to-b from-[#666] to-[#444] rounded-r-md shadow-lg"></div>
+        {/* Tablet Mockup (md to 2xl) - Realistic iPad Pro Style */}
+        <div className="hidden md:flex 2xl:hidden flex-col items-center relative scale-[0.85] md:scale-[0.95] xl:scale-100 mt-4">
+          {/* Main Body */}
+          <div className="relative w-[768px] h-[1024px] max-h-[85vh] bg-[#111] rounded-[3rem] border border-[#222] ring-[2px] ring-[#555] p-[24px] shadow-[0_40px_80px_rgba(0,0,0,0.9)] z-10">
+            {/* Top Power Button */}
+            <div className="absolute top-[0px] right-[100px] w-[50px] h-[3px] bg-gradient-to-r from-[#555] to-[#444] rounded-t-md shadow-[0_-2px_4px_rgba(255,255,255,0.1)] -mt-[3px]"></div>
             
-            {/* Camera */}
-            <div className="absolute top-[16px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-[#111] rounded-full border border-white/10 flex items-center justify-center shadow-inner z-20">
-               <div className="w-1 h-1 bg-blue-500/30 rounded-full"></div>
+            {/* Right Side Buttons (Volume) */}
+            <div className="absolute top-[80px] -right-[3px] w-[3px] h-[50px] bg-gradient-to-b from-[#666] to-[#444] rounded-r-md shadow-lg"></div>
+            <div className="absolute top-[140px] -right-[3px] w-[3px] h-[50px] bg-gradient-to-b from-[#666] to-[#444] rounded-r-md shadow-lg"></div>
+            
+            {/* Camera & Sensors */}
+            <div className="absolute top-[32px] left-1/2 -translate-x-1/2 flex items-center gap-4 z-20 opacity-80">
+               {/* Ambient Light Sensor */}
+               <div className="w-1.5 h-1.5 bg-[#000] rounded-full shadow-[inset_0_1px_2px_rgba(0,0,0,1)]"></div>
+               {/* Main Lens */}
+               <div className="w-3 h-3 bg-[#050505] rounded-full ring-1 ring-white/5 flex items-center justify-center shadow-[inset_0_2px_4px_rgba(0,0,0,1)]">
+                 <div className="w-1 h-1 bg-blue-700/40 rounded-full"></div>
+               </div>
             </div>
             
-            {/* Screen */}
-            <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden relative shadow-[inset_0_0_12px_rgba(0,0,0,0.5)]">
-              <iframe src="/" className="w-full h-full border-none" />
+            {/* Screen Container */}
+            <div className="w-full h-full bg-black rounded-[2rem] overflow-hidden relative shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] border-[3px] border-[#0a0a0a]">
+              {/* Glass Glare Overlay */}
+              <div className="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-white/[0.04] to-transparent z-10 pointer-events-none rounded-t-[2rem]"></div>
+              <iframe src="/" className="w-full h-full border-none relative z-0" />
             </div>
           </div>
         </div>
 
         {/* Mobile Mockup (less than md) - Realistic iPhone Style */}
-        <div className="flex md:hidden flex-col items-center relative scale-[0.7] sm:scale-75 mt-6">
+        <div className="flex md:hidden flex-col items-center relative scale-95 sm:scale-105 mt-6">
           <div className="relative w-[375px] max-w-[95vw] h-[812px] max-h-[80vh] bg-[#0a0a0a] rounded-[3rem] border-[1px] border-[#444] ring-[2px] ring-[#666] p-[8px] shadow-[0_20px_40px_rgba(0,0,0,0.8)] z-10">
             {/* Side Buttons */}
             <div className="absolute top-[120px] -left-[3px] w-[3px] h-[30px] bg-gradient-to-b from-[#777] to-[#555] rounded-l-md shadow-lg"></div>

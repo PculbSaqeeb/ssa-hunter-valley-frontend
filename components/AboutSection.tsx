@@ -97,7 +97,9 @@ export default function AboutSection() {
                 src="/images/about-img-1.jpg"
                 alt="About image 1"
                 fill
+                sizes="(max-width: 1024px) 65vw, 35vw"
                 className="object-cover"
+                priority
               />
             </div>
             <div className="relative w-[35%] h-full">
@@ -105,7 +107,9 @@ export default function AboutSection() {
                 src="/images/about-img-2.jpg"
                 alt="About image 2"
                 fill
+                sizes="(max-width: 1024px) 35vw, 20vw"
                 className="object-cover"
+                priority
               />
             </div>
           </div>
@@ -116,7 +120,9 @@ export default function AboutSection() {
                 src="/images/about-img-3.jpg"
                 alt="About image 3"
                 fill
+                sizes="(max-width: 1024px) 45vw, 25vw"
                 className="object-cover"
+                priority
               />
             </div>
             <div className="relative w-[55%] h-full">
@@ -124,7 +130,9 @@ export default function AboutSection() {
                 src="/images/about-img-4.jpg"
                 alt="About image 4"
                 fill
+                sizes="(max-width: 1024px) 55vw, 30vw"
                 className="object-cover"
+                priority
               />
             </div>
           </div>

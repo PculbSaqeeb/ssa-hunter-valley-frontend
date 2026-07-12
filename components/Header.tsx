@@ -62,11 +62,26 @@ export default function Header() {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className="flex flex-col gap-1.5 xl:hidden"
+          className="flex flex-col justify-center items-center w-8 h-8 xl:hidden"
         >
-          <span className={`h-0.5 w-6 transition-colors ${scrolled ? "bg-black" : "bg-white"}`} />
-          <span className={`h-0.5 w-6 transition-colors ${scrolled ? "bg-black" : "bg-white"}`} />
-          <span className={`h-0.5 w-6 transition-colors ${scrolled ? "bg-black" : "bg-white"}`} />
+          {open ? (
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className={`w-7 h-7 transition-colors ${scrolled ? "text-black" : "text-white"}`} 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor" 
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <div className="flex flex-col gap-1.5">
+              <span className={`h-0.5 w-6 transition-colors ${scrolled ? "bg-black" : "bg-white"}`} />
+              <span className={`h-0.5 w-6 transition-colors ${scrolled ? "bg-black" : "bg-white"}`} />
+              <span className={`h-0.5 w-6 transition-colors ${scrolled ? "bg-black" : "bg-white"}`} />
+            </div>
+          )}
         </button>
       </div>
 

@@ -52,6 +52,7 @@ export default function SignatureAcademy() {
           src="/images/signature-img.png"
           alt="Aerial render of the Signature Slam Academy site"
           fill
+          sizes="(max-width: 1024px) 100vw, 55vw"
           className="object-cover"
         />
       </div>
